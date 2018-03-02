@@ -38,8 +38,12 @@ html,body {
 	console.log(groupBy(mylist,'0'));
 
 */
-	 loadJsonData("http://nhl-statistics.com/school/data.json");
-	function getDataByKey(data, key)
+	setTimeout(function(){ 
+
+	  loadJsonData("http://nhl-statistics.com/school/data.json");
+		console.log("Väntar på google maps");
+  }, 5000);
+	 function getDataByKey(data, key)
 	{
 	  // returnerar hela jsontjofräset som en endimensionell array baserat på nyckel
 	  var list = [];
