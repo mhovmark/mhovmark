@@ -26,8 +26,9 @@ html,body {
 
 
 
-/*
-mylist=[[1,40],[2,55],[3,70],[1,10]];
+/* Hjälper Johan
+
+	mylist=[[1,40],[2,55],[3,70],[1,10]];
 	var groupBy = function(xs, key) {
 	  return xs.reduce(function(rv, x) {
 	    (rv[x[key]] = rv[x[key]] || []).push(x);
@@ -78,12 +79,12 @@ mylist=[[1,40],[2,55],[3,70],[1,10]];
 
 	  for (var i=0;i<jsondata.length;i++)
 	  {
-		  console.log(jsondata[i].geometry.coordinates);
+		 // console.log(jsondata[i].geometry.coordinates);
 		  var coords = jsondata[i].geometry.coordinates;
 		  var lat=coords[0];
-		  console.log(lat);
+	//	  console.log(lat);
 		  var long=coords[1];
-		  console.log(long);
+		//  console.log(long);
 		  
           var latLng = new google.maps.LatLng(lat.toString(), long.toString());
           var marker = new google.maps.Marker({
@@ -96,24 +97,7 @@ mylist=[[1,40],[2,55],[3,70],[1,10]];
        }
 	  
 
-      
-      //script.src="eqfeed_callback("++");";
-      //console.log(script.src);
-      //document.getElementsByTagName('head')[0].appendChild(script);
-      
-   /*   window.eqfeed_callback = function(results) {
-        console.log(typeof results);
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }      
-	 */
-	 
+     
 	}//slut på function googlemaps
 		
     function loadJsonData(url)
@@ -150,21 +134,7 @@ mylist=[[1,40],[2,55],[3,70],[1,10]];
       
       }
 
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-     /* window.eqfeed_callback = function(results) {
-       
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-         
-        }
      
-      }*/
     </script>
 	
 </body>

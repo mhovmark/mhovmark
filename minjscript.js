@@ -16,10 +16,18 @@ function main(data)
 
   // pris och enheter histogram
   var xyArrayPricesCount = count(data, "price");
-  xP = getX(xyArrayPricesCount);
-  yP = getY(xyArrayPricesCount);
+  var xP = getX(xyArrayPricesCount);
+  var yP = getY(xyArrayPricesCount);
   plot(xP, yP, "histogram", "bar", "", "Price Histogram", "Price", "Units");
 
+  // accomodates och enheter histogram
+  var xyArrayAccommodatesCount = count(data, "accommodates");
+  console.table(xyArrayAccommodatesCount);
+  var xA = getX(xyArrayAccommodatesCount);
+  var yA = getY(xyArrayAccommodatesCount);
+  plot(xA, yA, "histogram2", "bar", "", "Accommodates Histogram", "Accommodates", "Units");
+
+  
   // priser per min_stay BOXPLOT deprecated övningsuppgift :(
   // Hittar maxvärdet av min_stay
   var search = getDataByKey(data, "minstay");
@@ -60,7 +68,7 @@ function main(data)
   } ];
   plotWithTraces(traces2, "pie", "room types", "", "");
 
-  mygoogleMaps(data);
+
 }
 
 
